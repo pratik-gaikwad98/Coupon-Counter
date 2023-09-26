@@ -1,4 +1,4 @@
-# CEcommerce Application
+# Ecommerce Application
 Created Coupon counter project using springboot, mvc, security, thymeleaf, postgresql,swagger.
 user can see products, get coupon ,apply coupons to the products and order product.
 
