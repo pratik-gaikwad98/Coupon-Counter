@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Sign Up Form</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<!-- Main css -->
+<link rel="stylesheet" th:href="@{/style.css}">
+<!-- Main css -->
+</head>
+<body>
+
+	<div class="main">
+
+		<!-- Sign up form -->
+		<section class="signup">
+			<div class="container">
+				<div class="signup-content">
+					<div class="signup-form">
+						<h2 class="form-title">Sign up</h2>
+
+						<form method="Post" th:action="@{/demo/register}"
+							th:object="${userDto}" class="register-form" id="register-form">
+							<div class="form-group">
+								<label for="name"><i
+									class="zmdi zmdi-account material-icons-name"></i></label> <input
+									type="text" name="name" id="name" placeholder="Your Name"
+									th:field="*{username}" required />
+							</div>
+							<div class="form-group">
+								<label for="email"><i class="zmdi zmdi-email"></i></label> <input
+									type="email" name="email" id="email" placeholder="Your Email"
+									th:field="*{email}" required />
+							</div>
+							<div class="form-group">
+								<label for="pass"><i class="zmdi zmdi-lock"></i></label> <input
+									type="password" name="pass" id="pass" placeholder="Password"
+									th:field="*{password}" required />
+							</div>
+							<div class="form-group">
+
+								<button type="submit" name="signin" id="signin"
+									class="btn btn-dark" value="Register">Register</button>
+							</div>
+						</form>
+						<div th:if="${message}" class="alert alert-success" id="message">
+							<p th:text="${message}"></p>
+						</div>
+						<div th:if="${error}" class="alert alert-danger" id="message">
+							<p th:text="${error}"></p>
+						</div>
+					</div>
+					<div class="signup-image">
+						<figure>
+							<img src="/signup-image.jpg" alt="sing up image">
+						</figure>
+						<a th:href="@{/demo/login}" class="signup-image-link">I am
+							already member</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+	</div>
+</body>
+<script>
+	  setTimeout(function() {
+		var messageDiv = document.getElementById("message");
+		if (messageDiv) {
+			messageDiv.style.display = "none";
+		}
+	}, 3000);
+</script>
+
+</html>

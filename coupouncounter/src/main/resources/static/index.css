@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+
+
+#container {
+  position: relative;
+} 
+
+/* .tag-line {
+	color: Black;
+	font-family: 'Secular One', sans-serif;
+	font-weight: 100;
+	font-style: inherit;
+	position:relative;
+	left:200px;
+	top:200px;
+
+} */
+
+.order-video {
+	position: relative;
+}
+
+.page {
+	max-width: 2050px;
+	margin: 0 auto;
+	padding: 0 15px; 
+	
+}
+
