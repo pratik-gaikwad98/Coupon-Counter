@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	layout:decorator="layout">
+<head>
+<meta charset="UTF-8">
+<title>Welcome</title>
+<link rel="stylesheet" th:href="@{/index.css}">
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap"
+	rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	crossorigin="anonymous"></script>
+</head>
+<meta charset="UTF-8">
+<title>ORDER</title>
+</head>
+<body>
+	<div class="page">
+		<div class="custom-nav-bar">
+			<div th:replace="~{navbar :: navbar}"></div>
+		</div>
+		<div class="container mt-5" style="padding: 0px 0px 30px 0px"
+			align="center">
+
+			<div class="card text-white bg-dark mb-2 my-5"
+				style="max-width: 28rem;">
+				<div class="card-header display-4 text-light mb-2">Order
+					Placed</div>
+				<div class="card-body">
+
+					<table style="width: 90%" class="table table table-dark">
+						<thead>
+						</thead>
+						<tbody>
+
+							<tr>
+								<td>Order ID</td>
+								<td th:text="${OrderDto.id}"></td>
+							</tr>
+							<tr>
+								<td>Product Id</td>
+								<td th:text="${OrderDto.product}"></td>
+							</tr>
+							<tr>
+								<td>coupon Id</td>
+								<td th:text="${OrderDto.coupon}"></td>
+							</tr>
+							<tr>
+								<td>Mrp</td>
+								<td th:text="${OrderDto.mrp}"></td>
+							</tr>
+							<tr>
+								<td>Discount Value</td>
+								<td th:text="${OrderDto.discountValue}"></td>
+							</tr>
+							<tr>
+								<td>Offered Discount</td>
+								<td th:text="${OrderDto.offeredDiscount}"></td>
+							</tr>
+						</tbody>
+					</table>
+					
+				</div>
+			</div>
+			<a th:href="@{/demo/get_order}" class="btn btn-dark" role="button">view order</a>
+			
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	crossorigin="anonymous"></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	crossorigin="anonymous"></script>
+</html>
